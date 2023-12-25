@@ -1,13 +1,12 @@
 //pipes send information bit by bit as it helps in transferring information quickly
 
-
 var http = require('http');
 var fs = require('fs');
 
 var server = http.createServer(function(req, res){
     console.log('Hello World');
-    var myReadStream= fs.createReadStream(__dirname + '/readme.txt', 'utf-8');
-
+    res.writeHead(200, {'Content-Type':'text/html'});
+    var myReadStream= fs.createReadStream(__dirname + '/12html.html', 'utf-8'); //You can type any file name here and send it to server
     myReadStream.pipe(res);
 });
 
