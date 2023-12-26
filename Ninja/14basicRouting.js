@@ -16,7 +16,7 @@ var server = http.createServer(function(req, res){
         fs.createReadStream(__dirname + '/contact.html').pipe(res);
     }
     else if (req.url === '/api/ninjas'){
-        var ninjas = [{name: 'ryu', age: 29}, {name: 'yoshi', age: 32}];
+        var ninjas = [{name: 'saturo gojo', age: 29}, {name: 'yoshi ohara', age: 32}];
         res.writeHead(200, {'Content-Type' : 'application/json'});
         res.end(JSON.stringify(ninjas));
     }
