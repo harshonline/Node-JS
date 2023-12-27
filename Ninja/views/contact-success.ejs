@@ -31,20 +31,8 @@
 <body>
     <%- include('partials/nav.ejs'); %>
     <h1>Contact us</h1>
-    <p>Welcome to our services</p>
-
-<!-- It is necesaary to specify method as post or it will take get by default -->
-    <form id="contact-form" action="/contact" method="post"> 
-        <label for="person">Whom do you want to contact? </label > </br>
-        <input type="text" name="person" value="<%=qs.person%>"></br>
-        
-        <label for="dept">Which department</label></br>
-        <input type="text" name="dept" value="<%=qs.dept%>"></br>
-        
-        <label for="email">Your Email</label></br>
-        <input type="email" name="email" value="<%=qs.email%>"></br>
-        
-        <input type="submit" value="submit"></br>
-    </form>
+    <p>Thank you for contacting us</p>
+    <p>You contacted <%=data.person%> in the <%=data.dept%> department.</p>
+    <p>We will reply you at <%=data.email%></p>
 </body>
 </html>
