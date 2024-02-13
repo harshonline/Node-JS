@@ -18,9 +18,12 @@ app.post('/contact', urlencodedParser, function(req, res){
 })
 
 app.get('/', function(req, res){
-    res.render('contact');
+    res.render('home');
 })
 
+app.get('/home', function(req, res){
+    res.render('home');
+})
 
 app.get('/profile/:name', function(req, res){
     var data = {age:20, job: 'Ninja'}
